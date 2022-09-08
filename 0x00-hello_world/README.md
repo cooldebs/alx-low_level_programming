@@ -1,1 +1,1 @@
-Hello, printf
+my task 6
