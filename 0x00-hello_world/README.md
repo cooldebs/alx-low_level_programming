@@ -1,1 +1,1 @@
-Hello World in C
+My first task in C
