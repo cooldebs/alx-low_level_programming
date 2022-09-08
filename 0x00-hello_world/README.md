@@ -1,1 +1,1 @@
-Hello task in C
+My task
