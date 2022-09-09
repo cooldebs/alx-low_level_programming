@@ -2,9 +2,9 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main- Used to assign a random number to the variable n each time it is exeecuted.
- * if the nuumber is greater than zero: it is positive.
- * if the number is less than zero: it is negative, followed by a new line.
+ * main- it assigns a random number to the variable n each time it is executed.
+ * if the number is greater than 0: it is positive.
+ * if the number is less than 0: it is negative, followed by a new line.
  * Return: 0
  */
 int main(void)
