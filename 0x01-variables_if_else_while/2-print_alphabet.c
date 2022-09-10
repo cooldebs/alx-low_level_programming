@@ -3,16 +3,16 @@
 /**
  * main- It prints the alphabet in lowercase, followed by a new line.
  * You can only use the putchar.
- * Return: 0
+ * Rturn: 0
  */
 int main(void)
 {
-	int ch = 'a';
-	while (ch <= 'z')
+	char lowercase = 'a';
+	while (lowercase <= 'z')
 	{
-		putchar(ch);
-		ch ++;
+		putchar(lowercase);
+		lowercase ++;
 	}
-	putchar("\n");
+	putchar('\n');
 	return (0);
 }
