@@ -1,20 +1,19 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 /**
  * main- Entry point of the program.
  * Return: 0
  */
 int main(void)
 {
-	int m;
+	int number;
 
-	for (m = '0'; m <= '9'; m++)
+	for (number = 0; number <= 9; number++)
 	{
-		putchar(m);
-		if (m == 9);
+		putchar((number % 10) + '0');
+		if (number == 9)
 		{continue; }
 		putchar(',');
+		putchar(' ');
 	}
 	putchar('\n');
 	return (0);
