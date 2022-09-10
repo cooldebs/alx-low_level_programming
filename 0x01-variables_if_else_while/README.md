@@ -1,1 +1,1 @@
-My alphabet task
+Alphabet task
