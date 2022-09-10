@@ -1,16 +1,17 @@
 #include <stdio.h>
+#include <ctype.h>
 /**
- * main- To print the alphabet in lowercase, followed by a new line.
+ * main- It prints the alphabet in lowercase, followed by a new line.
  * You can only use the putchar.
- * Return: o
+ * Return: 0
  */
 int main(void)
 {
-	int ch;
-	for (ch= 'a'; ch<= 'z')
+	int ch = 'a';
+	while (ch <= 'z')
 	{
 		putchar(ch);
-	        ch ++;
+		ch ++;
 	}
 	putchar("\n");
 	return (0);
