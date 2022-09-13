@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * print_alphabet- Used to print the alphabet in lowercase.
  * You can only use _putchar twice in your code.
@@ -10,7 +10,7 @@ void print_alphabet(void)
 
 	for (letter = 'a'; letter <= 'z'; letter++)
 	{
-		putchar(letter);
+		_putchar(letter);
 	}
-	putchar('\n');
+	_putchar('\n');
 }
