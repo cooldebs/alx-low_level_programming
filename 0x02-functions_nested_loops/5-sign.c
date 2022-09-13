@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * print_sign- This function prints the sign of a number.
- * Return: 1 and prints + if n is greater than zero, 0 if n is zero, -1 and prints - if n is less than zero.
- * @c: c is an ascii character.
+ * @n: n is a number input.
+ * Return: 1 prints '+' if n > 0, 0 prints '0' if n = 0, -1 prints '-' if n < 0.
  */
 int print_sign(int n)
 {
@@ -19,6 +19,6 @@ int print_sign(int n)
 	else
 	{
 		_putchar('-');
-		return (-1);
+		return (0);
 	}
 }
