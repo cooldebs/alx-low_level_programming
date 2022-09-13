@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * print_alphabet- Used to print the alphabet in lowercase.
- * You can only use _putchar.
+ * You can only use _putchar twice in your code.
  * Return: 0
  */
 void print_alphabet(void)
@@ -10,8 +10,7 @@ void print_alphabet(void)
 
 	for (letter = 'a'; letter <= 'z'; letter++)
 	{
-		_putchar(letter);
+		putchar(letter);
 	}
-	_putchar('\n');
-	return (0);
+	putchar('\n');
 }
