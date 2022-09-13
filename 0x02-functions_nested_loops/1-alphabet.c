@@ -1,7 +1,7 @@
-#include "main.h"
+#include <stdio.h>
 /**
  * print_alphabet- Used to print the alphabet in lowercase.
- * You can only use _putchar twice in your code.
+ * You can only use _putchar.
  * Return: 0
  */
 void print_alphabet(void)
@@ -13,4 +13,5 @@ void print_alphabet(void)
 		_putchar(letter);
 	}
 	_putchar('\n');
+	return (0);
 }
