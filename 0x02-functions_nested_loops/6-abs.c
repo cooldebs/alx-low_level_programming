@@ -1,12 +1,11 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * main: check the code.
- * _abs- Function to print the absolute value of an integer.
+ * _abs: Function to check the absolute value of an integer.
  * @n: This is the integer input.
- * Return: 0
+ * Return: Absolute value of n.
  */
-int main(void)
+int _abs(int)
 {
 	int n;
 
@@ -18,5 +17,4 @@ int main(void)
 	printf("%d\n", n);
 	n = _abs(-50);
 	printf("%d\n", n);
-	return (0);
 }
