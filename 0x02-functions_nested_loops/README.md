@@ -1,1 +1,1 @@
-_putchar
+Learn your times table
