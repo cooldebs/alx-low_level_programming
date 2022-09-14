@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_times_table- Prints the n times table, starting with 0.
- * @n: Value of times table to be printed.
+ * print_times_table - Prints the times table of the input, starting with 0.
+ * @n: The value of the times table to be printed.
  */
 void print_times_table(int n)
 {
@@ -12,14 +12,14 @@ void print_times_table(int n)
 	{
 		for (num = 0; num <= n; num++)
 		{
-			_putchar('0);
+			_putchar('0');
 
 			for (mult = 1; mult <= n; mult++)
 			{
 				_putchar(',');
 				_putchar(' ');
 
-				prod = num + mult;
+				prod = num * mult;
 
 				if (prod <= 99)
 					_putchar(' ');
