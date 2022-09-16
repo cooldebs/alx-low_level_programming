@@ -2,8 +2,8 @@
 
 /**
  * _isdigit- a function that checks for a digit
- * @c: The character to be checked.
- * Return: 1 if digit, 0 if otherwise
+ * @c: character to be checked.
+ * Return: 1 if digit, 0 if otherwise.
  */
 int _isdigit(int c)
 {
