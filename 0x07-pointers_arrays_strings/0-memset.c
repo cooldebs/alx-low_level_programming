@@ -2,19 +2,17 @@
 
 /**
  * _memset - fills memory with a constant byte.
- * @n: number of bytes to the memory area.
- * @s: memory area.
- * @b: constant byte.
+ * @b: constant byte
+ * @s: memory area
+ * @n: number of bytes to the memory area
  *
- * Return: char
+ * Return: char.
  */
-
 char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int c;
 
 	for (c = 0; c < n; c++)
-		s[a] = b;
-
+		*s[c] = b;
 	return (s);
 }
