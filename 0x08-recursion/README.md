@@ -1,1 +1,1 @@
-Write a function that prints a string in reverse
+A function that returns the length of a string
