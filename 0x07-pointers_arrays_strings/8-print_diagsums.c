@@ -3,8 +3,8 @@
 
 /**
  * print_diagsums - prints the sum of the two diagonals of a sqr mat
- * @a: pointer to start of matrix.
- * @size: width of matrix column
+ * @a: square matrix
+ * @size: length of square
  *
  * Return: void
  */
@@ -14,12 +14,12 @@ void print_diagsums(int *a, int size)
 
 	for (i = 0; i < size; i++)
 	{
-		p = (i + size) + i;
-		l = *(a + p);
+		p = (i * size) + i;
+		l += *(a + p);
 	}
 	for (j = 0; j < size; j++)
 	{
-		p = (j + size) + (size - 1 - j);
+		p = (j * size) + (size - 1 - j);
 		r += *(a + p);
 	}
 	printf("%i, %i\n", l, r);
