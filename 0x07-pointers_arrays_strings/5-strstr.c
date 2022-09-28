@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * _strstr - a function that locates a substring.
- * @needle: substring to find in haystack.
- * @haystack: string to be checked.
+ * _strstr -  a function that locates a substring
+ * @haystack: a string.
+ * @needle: a substring.
  *
- * Return: pointer to beginning of needle in haystack, or NULL if otherwise.
+ * Return: a pointer to needle in haystack, or NULL if otherwise.
  */
 char *_strstr(char *haystack, char *needle)
 {
@@ -15,7 +15,7 @@ char *_strstr(char *haystack, char *needle)
 	{
 		while (needle[j] && haystack[i] == needle[0])
 		{
-			if (haystack[i] == needle[j])
+			if (haystack[i + j] == needle[j])
 				j++;
 			else
 				break;
