@@ -1,1 +1,1 @@
-A function that returns a prime number
+A function that checks if a string is palindrome
