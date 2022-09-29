@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * _strlen - return length of string
- * @str: string to be checked
+ * _strlen - return length of a string
+ * @str: string to check
  *
  * Return: length of str
  */
@@ -15,7 +15,7 @@ int _strlen(char *str)
 }
 
 /**
- * check_palindrome - checks to see if a string is palindrome
+ * check_palindrome - checks to see if a string is a palindrome
  * @x: left hand index
  * @y: right hand index
  * @z: possible palindrome
@@ -26,15 +26,15 @@ int check_palindrome(int x, int y, char *z)
 {
 	if (x >= y)
 		return (1);
-	else if (z[1] != z[y])
+	else if (z[x] != z[y])
 		return (0);
 	else
-		return (check_palindrome(x + 1, y - 1, z));
+		return (check_palindrome(1 + x, y - 1, z));
 }
 
 /**
- * is_palindrome - checks if a string is palindrome or not
- * @s: strint to be checked
+ * is_palindrome - states if a string is a palindrome
+ * @s: string to check
  *
  * Return: 1 if palindrome, 0 if otherwise
  */
