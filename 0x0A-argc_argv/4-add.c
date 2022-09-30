@@ -10,7 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, x, sum = 0;
+	int sum = 0, i, x;
 
 	for (i = 1; i < argc; i++)
 	{
@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 		{
 			if (isdigit(argv[i][x]) == 0)
 			{
-				printf("Error\n");
+				puts("Error");
 				return (1);
 			}
 		}
