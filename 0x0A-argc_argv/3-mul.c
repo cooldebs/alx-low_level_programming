@@ -21,9 +21,6 @@ int main(int argc, char *argv[])
 		printf("%d\n", multiply);
 		return (0);
 	}
-	else
-	{
-		printf("Try Again\n");
-		return (1);
-	}
+	printf("Try Again\n");
+	return (1);
 }
