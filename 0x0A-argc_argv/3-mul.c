@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
- * main - a program that multiplies two numbers.
+ * main - a program that multiplies two numbers
  * @argc: argument count
  * @argv: argument value
  *
@@ -9,18 +10,19 @@
  */
 int main(int argc, char *argv[])
 {
-	int i;
-	int multiply = 1; 
+	int num1, num2, multiply;
 
-	if (argc == 3)
+	if (argc != 3)
 	{
-		for (i = 1; i < argc; i++)
-		{
-			multiply = multiply * atoi(argv[i]);
-		}
+		printf("Error\n");
+		return (1);
+	}
+	else
+	{
+		num1 = atoi(argv[1]);
+		num2 = atoi(argv[2]);
+		multiply = num1 * num2;
 		printf("%d\n", multiply);
 		return (0);
 	}
-	printf("Try Again\n");
-	return (1);
 }
