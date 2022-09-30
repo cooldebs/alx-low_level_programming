@@ -2,31 +2,31 @@
 #include <stdlib.h>
 
 /**
- * main - a program that adds positive numbers.
+ * main - program that adds positive numbers.
  * @argc: argument count
  * @argv: argument value
  *
- * Return: Always 0 (success).
+ * Return: 0
  */
 int main(int argc, char *argv[])
 {
-	int sum = 0, i, x;
+	int i;
+	unsigned long sum = 0;
 
+	if (argc < 1)
+	{
+		printf("%d\n", 0);
+		return (0);
+	}
 	for (i = 1; i < argc; i++)
 	{
-		for (x = 0; argv[i][x]; x++)
+		if (!atoi(argv[i]))
 		{
-			if (isdigit(argv[i][x]) == 0)
-			{
-				puts("Error");
-				return (1);
-			}
+			printf("Error\n");
+			return (1);
 		}
+		sum += atoi(argv[i]);
 	}
-	for (i = 1; i < argc; i++)
-	{
-		sum = sum + atoi(argv[i]);
-	}
-	printf("%d\n", sum);
+	printf("%ld\n", sum);
 	return (0);
 }
