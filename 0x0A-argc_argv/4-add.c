@@ -6,7 +6,7 @@
  * @argc: argument count
  * @argv: argument value
  *
- * Return: Always 0 (success)
+ * Return: Always 0 (success).
  */
 int main(int argc, char *argv[])
 {
@@ -14,7 +14,9 @@ int main(int argc, char *argv[])
 
 	if (argc < 1)
 	{
+		printf("%d\n", 0);
 		return (0);
+	}
 	for (i = 1; i < argc; i++)
 	{
 		if (!atoi(argv[i]))
@@ -22,7 +24,7 @@ int main(int argc, char *argv[])
 			printf("Error\n");
 			return (1);
 		}
-		sum = sum + atoi(argv[i]);
+		sum = sum + atoi(argv[1]);
 	}
 	printf("%d\n", sum);
 	return (0);
