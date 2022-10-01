@@ -11,7 +11,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int i;
+	int i, j;
 	unsigned long sum = 0;
 
 	if (argc == 1)
@@ -21,12 +21,15 @@ int main(int argc, char *argv[])
 	}
 	for (i = 1; i < argc; i++)
 	{
-		if (!atoi(argv[i]) || atoi(argv[i]) < 0)
+		for (j = 0; argv[i][j]; j++)
 		{
-			printf("Error\n");
-			return (1);
+			if (isdigit(argv[i][j] == 0))
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		sum += atoi(argv[i]);
+		sum = sum + atoi(argv[i]);
 	}
 	printf("%ld\n", sum);
 	return (0);
