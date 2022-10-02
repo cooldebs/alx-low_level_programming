@@ -3,49 +3,39 @@
 
 /**
  * print_buffer - a function that prints a buffer.
- * print 10 bytes per line
- * starts with the position of the first byte in hexadecimal (8 chars),
- * Each line shows the hexadecimal content (2 chars) of the buffer
- * 2 bytes at a time, separated by a space
- * Each line shows the content of the buffer
- * If the byte is a printable character, print the letter, else, print '.'
- * Each line ends with a new line '\n'.
- * If size is 0 or less, the output should be a new line only '\n'
- * @b: number of bytes
- * @size: size of the byte
+ * @b: Buffer to be printed.
+ * @size: The number of bytes to be printed from the buffer.
  */
 void print_buffer(char *b, int size)
 {
-	int i = 0, j;
+	int byte, i;
 
-	if (size < 0)
+	for (byte = 0; byte < size; byte += 10)
 	{
-		printf('\n');
-		return;
-	}
-	while (i < size)
-	{
-		if (i % 10 == 0)
-			printf("%08x: ", i);
-		for (j = i; j < i + 9; j += 2)
+		printf("%08x: ", byte);
+
+		for (i = 0; i < 10; i++)
 		{
-			if ((j < size) && ((j + 1) < size))
-				printf("%02x%02x: ", b[j], b[j + 1]);
+			if ((i + byte) >= size)
+				printf("  ");
 			else
-			{
-				while (++j <= i + 10)
-					printf(" ");
+				printf("%02x", *(b + i + byte));
+			if ((i % 2) != 0 && i != 0)
 				printf(" ");
-			}
 		}
-		for (j = i; j < i + 9 && j < size; j++)
+		for (i = 0; i < 10; i++)
 		{
-			if (b[j] >= 32 && b[j] <= 126)
-				printf("%c", b[j]);
+			if ((i + byte) >= size)
+				break;
+			else if (*(b + i + byte) >= 31 && *(b + i + byte) <= 126)
+				printf("%c", *(b + i + byte));
 			else
-				putchar('.');
+				printf(".");
 		}
-		printf('\n');
-		i += 10;
+		if (byte >= size)
+			continue;
+		printf("\n");
 	}
+	if (size <= 0)
+		printf("\n");
 }
