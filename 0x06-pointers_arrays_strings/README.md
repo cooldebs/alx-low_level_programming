@@ -1,1 +1,1 @@
-arrays and pointers
+Write a function that adds two numbers.
