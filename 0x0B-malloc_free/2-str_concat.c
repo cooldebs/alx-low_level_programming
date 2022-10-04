@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * str_concat - a function that concatenates two strings.
+ * str_concat - concatenates two strings.
  * a NULL string is treated as an empty string.
  * @s1: pointer to string
  * @s2: pointer to string
@@ -27,14 +27,11 @@ char *str_concat(char *s1, char *s2)
 	len2 = 0;
 	while (s2[len2] != '\0')
 		len2++;
-
 	size = len1 + len2;
-
 	nstr = malloc((sizeof(char) * size) + 1);
 	/* check if malloc was successful */
 	if (nstr == NULL)
 		return (NULL);
-
 	i = 0;
 	while (i < len1)
 	{
@@ -44,7 +41,7 @@ char *str_concat(char *s1, char *s2)
 	j = 0;
 	while (i <= size)
 	{
-		nstr[j] = s2[i];
+		nstr[i] = s2[j];
 		i++;
 		j++;
 	}
