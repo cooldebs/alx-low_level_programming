@@ -1,21 +1,22 @@
 #include "main.h"
 
 /**
- * _strlen - returns the length of a string
- * @s: the string
+ * _strcpy - copies a string
+ * @src: copy from
+ * @dest: copy to
  *
- * Return: length of string s
+ * Return: scr
  */
-int _strlen(char *s)
+char *_strcpy(char *dest, char *src)
 {
-	int x, i;
+	int i;
 
-	x = 0;
-	i = 0;
-	while (s[i] != '\0')
+	
+	for (i = 0; src[i] != '\0'; i++)
 	{
-		++x;
-		++i;
+		dest[i] = src[i];
 	}
-	return (x);
+	dest[i] = '\0';
+
+	return (dest);
 }
