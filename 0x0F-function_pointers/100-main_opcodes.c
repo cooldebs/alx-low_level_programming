@@ -37,7 +37,7 @@ imt main(int argc, char **argv)
 		printf("Error\n");
 		exit(1);
 	}
-	x = atoi(argc[1]);
+	x = atoi(argv[1]);
 	if (x < 0)
 	{
 		printf("Error\n");
