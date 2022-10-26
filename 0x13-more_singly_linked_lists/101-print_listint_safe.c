@@ -36,7 +36,6 @@ size_t print_listint_safe(const listint_t *head)
 
 	hptr = NULL;
 	while (head != NULL)
-	while (head != NULL)
 	{
 		new = malloc(sizeof(listp_t));
 
@@ -64,6 +63,7 @@ size_t print_listint_safe(const listint_t *head)
 		head = head->next;
 		nnodes++;
 	}
+
 	free_listp(&hptr);
 	return (nnodes);
 }
