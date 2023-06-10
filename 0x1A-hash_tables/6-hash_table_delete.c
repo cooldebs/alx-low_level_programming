@@ -6,21 +6,21 @@
  */
 void hash_table_delete(hash_table_t *ht)
 {
-	hash_node_t *dummy, *holder;
+	hash_node_t *temp, *tmp;
 	unsigned long int i;
 
 	if (ht && ht->array)
 	{
 		for (i = 0; i < ht->size; i++)
 		{
-			dummy = ht->array[i];
-			while (dummy)
+			temp = ht->array[i];
+			while (temp)
 			{
-				holder = dummy->next;
-				free(dummy->key);
-				free(dummy->value);
-				free(dummy);
-				dummy = holder;
+				tmp = temp->next;
+				free(temp->key);
+				free(temp->value);
+				free(temp);
+				temp = tmp;
 			}
 		}
 		free(ht->array);
