@@ -2,16 +2,16 @@
 
 /**
  * hash_table_set - adds an element to the hash table
- * @ht: the hash table
+ * @ht: the hash table to add or update the key/value to
  * @key: the key
  * @value: the value associated with the key
  *
- * Return: 1 on success
+ * Return: 1 on success, 0 otherwise
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int idx, x = 0;
-	hash_node_t *new, *dummy;
+	hash_node_t *new, *temp;
 
 	if (strlen(key) == 0 || !key || !value || !ht)
 		return (0);
@@ -26,19 +26,19 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new->next = NULL;
 	if (ht->array[idx])
 	{
-		dummy = ht->array[idx];
-		while (dummy)
+		temp = ht->array[idx];
+		while (temp)
 		{
-			if (strcmp(dummy->key, key) == 0)
+			if (strcmp(temp->key, key) == 0)
 			{
-				free(dummy->value);
-				dummy->value = strdup(value);
-				if (dummy->value == NULL)
+				free(temp->value);
+				temp->value = strdup(value);
+				if (temp->value == NULL)
 					return (0);
 				x = 1;
 				break;
 			}
-			dummy = dummy->next;
+			temp = temp->next;
 		}
 		if (x == 0)
 		{
