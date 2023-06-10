@@ -10,17 +10,17 @@
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	unsigned long int idx;
-	hash_node_t *dummy;
+	hash_node_t *temp;
 
 	if (ht && ht->array)
 	{
 		idx = hash_djb2((const unsigned char *) key) % ht->size;
-		dummy = ht->array[idx];
-		while (dummy)
+		temp = ht->array[idx];
+		while (temp)
 		{
-			if (strcmp(dummy->key, key) == 0)
-				return (dummy->value);
-			dummy = dummy->next;
+			if (strcmp(temp->key, key) == 0)
+				return (temp->value);
+			temp = temp->next;
 		}
 	}
 
